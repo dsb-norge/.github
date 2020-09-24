@@ -1,0 +1,17 @@
+{
+    "name": "DSB Workflow",
+    "description": "DSB CI workflow template.",
+    "iconName": "dsb-logo",
+    "categories": [
+        "Kotlin",
+		"Java",
+		"Vue",
+		"JavaScript",
+		"TypeScript"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
