@@ -1,9 +1,5 @@
 ## Hi there 👋
 
-
-
-**Here are some ideas to get you started:**
-
 🙋‍♀️ DSB - The Norwegian Directorate for Civil Protection
 <!--
 🌈 We have a couple of public projects that you can contribute to
