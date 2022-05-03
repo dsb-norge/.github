@@ -32,7 +32,10 @@ will be done when the PR is merged (e.g. how many pull requests will be created 
 The generated file `renovate.json` should look like this (can be edited before merge):
 
     {
-        "extends": ["github>dsb-norge/renovate-config"]
+        "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+        "extends": [
+            "local>dsb-norge/.github:renovate-config"
+        ]
     }
 
 The file can be edited (e.g. for overrides) before merge. To validate the config before commit, install the validator
