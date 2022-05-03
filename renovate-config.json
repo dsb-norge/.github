@@ -1,0 +1,58 @@
+{
+  "java": {
+    "enabledManagers": ["maven"],
+    "extends": [
+      ":dependencyDashboard",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":ignoreModulesAndTests",
+      ":autodetectPinVersions",
+      ":prConcurrentLimit10",
+      "workarounds:all"
+    ],
+    "hostRules": [
+      {
+        "matchHost": "https://repo.dsb.no/repository/dsb/",
+        "encrypted": {
+          "username": "wcFMA/xDdHCJBTolAQ//WUUCB8pCw4kVNEO0NXpaGC2g+uwkrgPA8brKzWMe4JWuHgDf7QzuC9f+dEq94OmnXED5oQ7ulk/vzERQ8s3H43S0WdbPZ9B2P2WnpPv3IOsYarM9PBXemVA18QfMQmZoStYoFwfD/QaczxZIlu0d1xyYeEZnN4tF7w4epYfAJV4y3nezt5OtEYOF2xDJcrjbE5PrgE+/BTNyUVXmvcHido4MlOnedm4hjRJ1c2a3PvBIZU12NjdHGjyF5ymNL/uoAJbqEGyhKYk8t2NN9rDkns3PdHhRiVD9DuDdHK1dshp/Uiutn9/glMv1sAsE1JWds9sFx55uioqrT1VJWTWYCDf8GPYlY4xf/dWiUjfuSPJcC/gwYaTYVa5VRjBB2+iG89RrbSOhAEt8S6p8Sz4THC0k44bTeXwSK+jGZrV4X0N9SoKeI6mrq+rZFMIRJQo6EvzoW39Q69TJzyi105VpdjKtqwoUD+tPFREK4BZJdI1NtdRRCfI9pZC3eKLW6rmNSGP1yCtECLalHx0ODXFiRzpNtn4clkwtVF1k6MvPfvk1WaaoGUlCeGyFXqAvraipdmZviQPxJwDRBOd+boz68ucQBZ0yiQzBCrVOlxHLBbws1fAsR0jkCIndx4bADmuRAwg0Qlaoad01kNKF11iPF9XGMgkuXmllf8JVjCVmna7SWAHb45O9+xuDw3qXcTgB2wmaOOO4P5jY1KwQQexKosQwyHWEfMdCa+2618g2XaCoss+aIXafy73FA5Zn96gLfvYkISwdsVjTYaoayzedragJB4EtKcs7ljU",
+          "password": "wcFMA/xDdHCJBTolAQ/9Gmi2zO7Vfx8iQaCjDOCRNrQHMT53hLdVj2rjC8KgAT+TyEPx++tvWjuvoSiffjU7WnOUrjisON9v6uDvTAjHCwZpB1YwroWBNMszxn/T3VtXesbCgd9erzPPb17GShgDOS/Y6hqhEv7PmBJR+2GgsCRtt6ce+GrD7G9DzSaWwaU5CNGg/HooS2YEV9u9SudbfbSyZOn95HTJP2rdxagZ/mFpMtMQ8wJ0SCkNSM2TSrigzBo3mhcRrKV2yLepgGljXeLUw+AeLqthK7bsfEe5VkD+LId9j+UTnRC4tTwh72BEhU9BWO1V1LVNUklEA+Oxx3qoIWhgsVtddsVSSPk0VWwInKyUuMQ4S3pF7kAutfbtthckU1/HQrKIUZTcf5uHXY7sNCTPOhNpLm+juS0A7hc+WVy8u4uk52yc71fVq2g5nkrJA466pMlFosT0xYIit8UcJtpIv2eCDZGcm47L2U9+fsnJB+jD7MCYsAkpWEPoVxHUvG19/2cekDvAdN6A/GX6IXsVsXltY+c17Sf6m47YGqxu2xezFdoglQMhfnRq73inmLDu2uihz9UyHhGyhUunsVyumDgLWFq1bu0/1Zh/KsedmdWIOFIl9qdN64d8rWG97islojMCKhPdK+Zgs18x1HZvZ2HM5G5QNqZrg+JTLUJ1Xos6424t3zwRiQjSfAHmjDUUpFU7Mn31EAHcTEbK2bQQ+5HKs3/7AQpizZl3NqilhJvfNmkfoioT6fNLk37a0pmngP1hqaJnKytr9khihxgDIbW7LkrwhlPjTmctv4vGH0kA+91hRJYhlkxJCrBVEItAwof7ApJf5/N2nHQY4J7MBcWTpzv2HQk"
+        }      }
+    ],
+    "packageRules": [
+      {
+        "matchManagers": ["maven"],
+        "matchUpdateTypes": [
+          "major",
+          "minor",
+          "patch"
+        ],
+        "groupName": "backend"
+      }
+    ]
+  },
+  "js": {
+    "enabledManagers": ["npm"],
+    "extends": [
+      ":dependencyDashboard",
+      ":semanticPrefixFixDepsChoreOthers",
+      ":ignoreModulesAndTests",
+      ":autodetectPinVersions",
+      ":prConcurrentLimit10",
+      "workarounds:all",
+      ":pinAllExceptPeerDependencies"
+    ]
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": [
+        "major",
+        "minor",
+        "patch"
+      ],
+      "groupName": "frontend"
+    }
+  ],
+  "prHourlyLimit": 4,
+  "reviewers": ["dsb-developers"],
+  "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
+}
