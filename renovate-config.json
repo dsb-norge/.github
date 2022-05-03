@@ -9,19 +9,19 @@
       ":prConcurrentLimit10",
       "workarounds:all",
       ":pinAllExceptPeerDependencies"
+    ],
+    "packageRules": [
+      {
+        "matchManagers": ["npm"],
+        "matchUpdateTypes": [
+          "major",
+          "minor",
+          "patch"
+        ],
+        "groupName": "frontend"
+      }
     ]
   },
-  "packageRules": [
-    {
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "groupName": "frontend"
-    }
-  ],
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
   "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
