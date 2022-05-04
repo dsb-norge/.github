@@ -15,8 +15,9 @@ This repository contains `renovate-config.json` which contains common configurat
 ## Making changes
 Changes to the config file in this repo takes immediate effect on all repositories referring to this common config.
 
-To validate the config before commit, install the validator
-with `npm i -g renovate` and then check the config with the command `renovate-config-validator`.
+To validate the config before commit, install the validator with `npm i -g renovate` and then check the config:
+
+    cp renovate-config.json renovate.json && renovate-config-validator && rm renovate.json
 
 ### Need to configure a secret?
 __DO NOT COMMIT PLAIN TEXT SECRETS TO THIS REPO!__
