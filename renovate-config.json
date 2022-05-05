@@ -20,7 +20,32 @@
       "groupName": "frontend"
     }
   ],
+  "major": {
+    "packageRules": [
+      {
+        "excludePackageNames": [
+          "@vitejs/plugin-vue",
+          "@dsb-norge/eslint-config-dsb-vue",
+          "bootstrap",
+          "eslint",
+          "keycloak-js",
+          "sass-loader",
+          "vue",
+          "vue-i18n",
+          "vue-router",
+          "vuex"
+        ],
+        "excludePackagePrefixes": [
+          "@vue/cli-",
+          "eslint-plugin-"
+        ],
+        "groupName": "frontend (major)"
+      }
+    ]
+  },
+  "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
-  "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
+  "schedule": ["after 12:30am and before 3:30am every weekday"],
+  "timezone": "UTC"
 }
