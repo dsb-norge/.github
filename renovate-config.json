@@ -1,4 +1,6 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared Renovate configuration for dsb-norge projects where major updates get separate PRs so that they can be closed (non-immortal)",
   "enabledManagers": ["npm"],
   "extends": [
     ":dependencyDashboard",
@@ -11,18 +13,15 @@
   ],
   "packageRules": [
     {
-      "matchManagers": ["npm"],
-      "matchUpdateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "groupName": "frontend"
+      "groupName": "frontend - minor and patch",
+      "matchUpdateTypes": ["minor", "patch"]
     }
   ],
   "major": {
     "packageRules": [
       {
+        "groupName": "frontend",
+        "matchUpdateTypes": ["major"],
         "excludePackageNames": [
           "@vitejs/plugin-vue",
           "@dsb-norge/eslint-config-dsb-vue",
@@ -38,8 +37,7 @@
         "excludePackagePrefixes": [
           "@vue/cli-",
           "eslint-plugin-"
-        ],
-        "groupName": "frontend (major)"
+        ]
       }
     ]
   },

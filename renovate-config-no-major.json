@@ -1,0 +1,28 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "description": "Shared Renovate configuration for dsb-norge projects where major updates are skipped",
+  "enabledManagers": ["npm"],
+  "extends": [
+    ":dependencyDashboard",
+    ":semanticPrefixFixDepsChoreOthers",
+    ":ignoreModulesAndTests",
+    ":autodetectPinVersions",
+    ":prConcurrentLimit10",
+    "workarounds:all",
+    ":pinAllExceptPeerDependencies"
+  ],
+  "packageRules": [
+    {
+      "groupName": "frontend - minor and patch",
+      "matchUpdateTypes": ["minor", "patch"]
+    }
+  ],
+  "major": {
+    "enabled": false
+  },
+  "ignoreScripts": true,
+  "prHourlyLimit": 4,
+  "reviewers": ["dsb-developers"],
+  "schedule": ["after 12:30am and before 3:30am every weekday"],
+  "timezone": "UTC"
+}
