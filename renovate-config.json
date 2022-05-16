@@ -1,6 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Shared Renovate configuration for dsb-norge projects where major updates get separate PRs so that they can be closed (non-immortal)",
+  "description": "Shared Renovate configuration for dsb-norge projects. Updates of all types are collected into the same PR, except for major updates of the excluded packages.",
+
   "enabledManagers": ["npm"],
   "extends": [
     ":dependencyDashboard",
@@ -13,34 +14,26 @@
   ],
   "packageRules": [
     {
-      "groupName": "frontend - minor and patch",
-      "matchUpdateTypes": ["minor", "patch"]
+      "groupName": "frontend - major, minor and patch",
+      "matchUpdateTypes": ["major", "minor", "patch"],
+      "excludePackageNames": [
+        "@vitejs/plugin-vue",
+        "@dsb-norge/eslint-config-dsb-vue",
+        "bootstrap",
+        "eslint",
+        "keycloak-js",
+        "sass-loader",
+        "vue",
+        "vue-i18n",
+        "vue-router",
+        "vuex"
+      ],
+      "excludePackagePrefixes": [
+        "@vue/cli-",
+        "eslint-plugin-"
+      ]
     }
   ],
-  "major": {
-    "packageRules": [
-      {
-        "groupName": "frontend",
-        "matchUpdateTypes": ["major"],
-        "excludePackageNames": [
-          "@vitejs/plugin-vue",
-          "@dsb-norge/eslint-config-dsb-vue",
-          "bootstrap",
-          "eslint",
-          "keycloak-js",
-          "sass-loader",
-          "vue",
-          "vue-i18n",
-          "vue-router",
-          "vuex"
-        ],
-        "excludePackagePrefixes": [
-          "@vue/cli-",
-          "eslint-plugin-"
-        ]
-      }
-    ]
-  },
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
