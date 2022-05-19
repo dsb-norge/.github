@@ -1,15 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "description": "Shared Renovate configuration for dsb-norge projects where major updates get separate PRs so that they can be closed (non-immortal)",
+  "description": "Shared Renovate configuration for dsb-norge projects. Minor and patch updates are collected into the same PR, while major updates are ignored.",
   "enabledManagers": ["npm"],
   "extends": [
-    ":dependencyDashboard",
     ":semanticPrefixFixDepsChoreOthers",
     ":ignoreModulesAndTests",
     ":autodetectPinVersions",
     ":prConcurrentLimit10",
     "workarounds:all",
-    ":pinAllExceptPeerDependencies"
+    ":pinAllExceptPeerDependencies",
+    ":disableMajorUpdates"
   ],
   "packageRules": [
     {
@@ -17,30 +17,6 @@
       "matchUpdateTypes": ["minor", "patch"]
     }
   ],
-  "major": {
-    "packageRules": [
-      {
-        "groupName": "frontend",
-        "matchUpdateTypes": ["major"],
-        "excludePackageNames": [
-          "@vitejs/plugin-vue",
-          "@dsb-norge/eslint-config-dsb-vue",
-          "bootstrap",
-          "eslint",
-          "keycloak-js",
-          "sass-loader",
-          "vue",
-          "vue-i18n",
-          "vue-router",
-          "vuex"
-        ],
-        "excludePackagePrefixes": [
-          "@vue/cli-",
-          "eslint-plugin-"
-        ]
-      }
-    ]
-  },
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
