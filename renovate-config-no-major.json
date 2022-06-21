@@ -14,7 +14,8 @@
   "packageRules": [
     {
       "groupName": "frontend - minor and patch",
-      "matchUpdateTypes": ["minor", "patch"]
+      "matchUpdateTypes": ["minor", "patch"],
+      "excludePackageNames": ["sass"]
     }
   ],
   "major": {
