@@ -18,6 +18,9 @@
       "excludePackageNames": ["sass"]
     }
   ],
+  "ignoreDeps": [
+    "sass"
+  ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
