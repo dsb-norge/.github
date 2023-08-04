@@ -19,7 +19,8 @@
     }
   ],
   "ignoreDeps": [
-    "sass"
+    "sass",
+    "@​vue/tsconfig"
   ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
