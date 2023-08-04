@@ -15,7 +15,7 @@
     {
       "groupName": "frontend - minor and patch",
       "matchUpdateTypes": ["minor", "patch"],
-      "excludePackageNames": ["sass"]
+      "excludePackageNames": ["sass", "@​vue/tsconfig"]
     }
   ],
   "ignoreDeps": [
