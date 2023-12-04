@@ -15,11 +15,11 @@
     {
       "groupName": "frontend - minor and patch",
       "matchUpdateTypes": ["minor", "patch"],
-      "excludePackageNames": ["sass", "@​vue/tsconfig"]
+      "excludePackageNames": ["@\u200Bdsb-norge/vue-keycloak-js", "@​vue/tsconfig"]
     }
   ],
   "ignoreDeps": [
-    "sass",
+    "@\u200Bdsb-norge/vue-keycloak-js",
     "@​vue/tsconfig"
   ],
   "ignoreScripts": true,
