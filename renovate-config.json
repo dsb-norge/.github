@@ -15,12 +15,13 @@
     {
       "groupName": "frontend - minor and patch",
       "matchUpdateTypes": ["minor", "patch"],
-      "excludePackageNames": ["@\u200Bdsb-norge/vue-keycloak-js", "@​vue/tsconfig"]
+      "excludePackageNames": ["sass", "@dsb-norge/vue-keycloak-js", "@vue/tsconfig"]
     }
   ],
   "ignoreDeps": [
-    "@\u200Bdsb-norge/vue-keycloak-js",
-    "@​vue/tsconfig"
+    "sass",
+    "@dsb-norge/vue-keycloak-js",
+    "@vue/tsconfig"
   ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
