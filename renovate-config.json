@@ -67,5 +67,6 @@
   "schedule": [
     "after 12:30am and before 6:30am every weekday"
   ],
+  "updateNotScheduled": false,
   "timezone": "UTC"
 }

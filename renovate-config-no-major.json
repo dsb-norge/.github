@@ -24,6 +24,6 @@
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
-  "schedule": ["after 12:30am and before 3:30am every weekday"],
+  "updateNotScheduled": false,
   "timezone": "UTC"
 }
