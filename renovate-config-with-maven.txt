@@ -49,5 +49,6 @@ repositories no longer depends on on-premise services, this config can replace t
   ],
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
-  "schedule": ["after 10pm and before 5am every weekday", "every weekend"]
+  "schedule": ["after 10pm and before 5am every weekday", "every weekend"],
+  "updateNotScheduled": false
 }
