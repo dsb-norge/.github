@@ -69,5 +69,6 @@
     "every weekend"
   ],
   "updateNotScheduled": false,
-  "timezone": "UTC"
+  "timezone": "UTC",
+  "automerge": true
 }
