@@ -72,6 +72,6 @@
   "timezone": "UTC",
   "automerge": true,
   "labels": [
-    "renovate"
+    "pr-created-by-renovate"
   ]
 }
