@@ -70,5 +70,8 @@
   ],
   "updateNotScheduled": false,
   "timezone": "UTC",
-  "automerge": true
+  "automerge": true,
+  "labels": [
+    "pr-created-by-renovate"
+  ]
 }
