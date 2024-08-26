@@ -43,6 +43,12 @@
         "https://maven.pkg.github.com/dsb-norge/.github",
         "https://repo.maven.apache.org/maven2/"
       ]
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vue-i18n"],
+      "matchVersions": ["9.14.0"],
+      "enabled": false
     }
   ],
   "hostRules": [
