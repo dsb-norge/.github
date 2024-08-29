@@ -49,6 +49,12 @@
       "matchPackageNames": ["vue-i18n"],
       "matchVersions": ["9.14.0"],
       "enabled": false
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vue-tsc"],
+      "matchVersions": ["2.1.0"],
+      "enabled": false
     }
   ],
   "hostRules": [
