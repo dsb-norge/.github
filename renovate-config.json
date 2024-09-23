@@ -49,9 +49,7 @@
     {
       "hostType": "maven",
       "matchHost": "maven.pkg.github.com",
-      "encrypted": {
-        "token": "wcFMA/xDdHCJBTolAQ/+Mx9k2s1ZqzsisDS2G3pRQnU34sz3EOaiKm60+wBrfGQTIVpDK9vsDbFSFVbLgUWoFClbFgAYlzMPkBvYmCOkzW5Nhinl6u3jPmQAel09NJ/BamxztqABlLKou/r5VuVJdqOHE9EJ0wDnE9ZSr6Z+8pUsPOrLZa/AZNsq9m0u1mcI2u7g5liRRAxaxHsqTREqED79XKMGWfP6l14GF96ibRHaIaiojnIMc59Acar3eNBaBLSMMSyvObpGrNz0wjRdwefi0BxgfZTeChYJjPiuVZs+DHSdWarBBdncqVlbP4nG9dWaf9S/Pl5Apm06kRATvD2QlqIiJa6WXeOjZEfpv4ysYBCWKxsuaBY9xEb/wxN0sDN5kjqK8/wCvSBpunJhj9Ws2TKnMKX9bil6JXF0UG5hcoWhQbW6hyKEdDzFIHj+POvYi+T5/c6/syRsXENpRs9KSZuWe+Kn9cDlS/+MDwSbVnnhyk+sGFm550j/xz4/CdjxvR5LVQhpDL/Zl428MouqSgwT41lzL6b9sJGCvJ07i2GPuCigfydHrb8A14hIE2Fpn7LMiOlJLobUvq58094I4cq4GLHZY/9xFSN34e6i60GmCeErfW1VTUetvhhdHVfJGoIO8obKh4JzW1kNYHnykqRNUbixuJkjI5O55putYyM3fbfspecuYZaHsHfSeAHY5bgSkWeGBIqiXipkKotyHoMPkn2b8I1V6uNo3+0++RBuTLlTHADpXAHRNfAbtu2OVR0GBeDBJ9cBD/17LmKxhJPbnZD1z0Kq0QuRb2kv+5xfcLOnnt7Nw/l7KY7P8xYaTcBu3lgMj7lp7D8E7y11Mwjpr65btg"
-      }
+      "token": "{{ secrets.GITHUB_SECRET }}"
     }
   ],
   "ignoreDeps": [
