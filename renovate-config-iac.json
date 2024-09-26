@@ -1,0 +1,46 @@
+{
+    "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+    "description": "Shared Renovate configuration for dsb-norge IaC projects where major updates are skipped",
+    "enabledManagers": [
+        "terraform",
+        "tflint-plugin"
+    ],
+    "extends": [
+        "helpers:pinGitHubActionDigests",
+        ":separateMultipleMajorReleases",
+        ":semanticCommits",
+        ":semanticPrefixFixDepsChoreOthers",
+        ":prConcurrentLimit10"
+    ],
+    "minimumReleaseAge": "3 days",
+    "prCreation": "not-pending",
+    "terraform": {
+        "ignorePaths": [
+            "**/_terraform-state/**"
+        ],
+        "pinDigests": true
+    },
+    "commitMessageLowerCase": "never",
+    "prHourlyLimit": 4,
+    "major": {
+        "enabled": true
+    },
+    "ignoreScripts": true,
+    "reviewers": [
+        "dsb-developers"
+    ],
+    "timezone": "Europe/Stockholm",
+    "schedule": [
+        "after 01:20am and before 7:30am every weekday",
+        "every weekend"
+    ],
+    "updateNotScheduled": false,
+    "labels": [
+        "pr-created-by-renovate"
+      ],
+      "lockFileMaintenance": {
+        "enabled": true,
+        "schedule": "after 01:20am and before 6:30am every weekday"
+
+    }
+}
