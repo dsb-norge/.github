@@ -25,7 +25,7 @@
     "major": {
         "enabled": true
     },
-    "assignees": [
+    "reviewers": [
         "Artlvns",
         "Laffs2k5"
     ],
