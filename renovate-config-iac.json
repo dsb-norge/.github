@@ -1,6 +1,6 @@
 {
     "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-    "description": "Shared Renovate configuration for dsb-norge IaC projects where major updates are skipped",
+    "description": "Shared Renovate configuration for dsb-norge IaC projects",
     "enabledManagers": [
         "terraform",
         "tflint-plugin"
@@ -25,16 +25,16 @@
     "major": {
         "enabled": true
     },
-    "ignoreScripts": true,
-    "reviewers": [
-        "dsb-developers"
+    "assignees": [
+        "Artlvns",
+        "Laffs2k5"
     ],
     "timezone": "UTC",
     "schedule": [
         "after 03:30am and before 7:30am every weekday",
         "every weekend"
     ],
-    "updateNotScheduled": false,
+    "updateNotScheduled": true,
     "labels": [
         "pr-created-by-renovate"
       ],
