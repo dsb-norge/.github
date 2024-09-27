@@ -30,9 +30,7 @@
         "npm"
       ],
       "excludePackageNames": [
-        "sass",
-        "@dsb-norge/vue-keycloak-js",
-        "@vue/tsconfig"
+        "@dsb-norge/vue-keycloak-js"
       ]
     },
     {
@@ -43,6 +41,15 @@
         "https://maven.pkg.github.com/dsb-norge/.github",
         "https://repo.maven.apache.org/maven2/"
       ]
+    },
+    {
+      "matchManagers": ["maven"],
+      "matchPackageNames": [
+        "co.elastic.clients:elasticsearch-java",
+        "org.elasticsearch.client:elasticsearch-rest-client"
+      ],
+      "matchVersions": ["8.15.x"],
+      "enabled": false
     }
   ],
   "hostRules": [
@@ -53,9 +60,7 @@
     }
   ],
   "ignoreDeps": [
-    "sass",
-    "@dsb-norge/vue-keycloak-js",
-    "@vue/tsconfig"
+    "@dsb-norge/vue-keycloak-js"
   ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
