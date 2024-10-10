@@ -31,7 +31,8 @@
     ],
     "updateNotScheduled": true,
     "labels": [
-        "pr-created-by-renovate"
+        "pr-created-by-renovate",
+        "iac"
       ],
       "lockFileMaintenance": {
         "enabled": true,
