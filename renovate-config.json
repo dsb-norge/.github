@@ -80,7 +80,7 @@
     "every weekend"
   ],
   "updateNotScheduled": false,
-  "timezone": "UTC",
+  "timezone": "Europe/Oslo",
   "automerge": true,
   "labels": [
     "pr-created-by-renovate"
