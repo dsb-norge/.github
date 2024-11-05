@@ -2,10 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shared Renovate configuration for dsb-norge projects. Minor and patch updates are collected into the same PR, while major updates are ignored.",
   "platform": "github",
-  "enabledManagers": [
-    "npm",
-    "maven"
-  ],
+  "enabledManagers": ["npm", "maven"],
   "extends": [
     ":autodetectPinVersions",
     ":prConcurrentLimit10",
@@ -46,28 +43,20 @@
       ]
     },
     {
-      "matchManagers": [
-        "maven"
-      ],
+      "matchManagers": ["maven"],
       "matchPackageNames": [
         "co.elastic.clients:elasticsearch-java",
         "org.elasticsearch.client:elasticsearch-rest-client"
       ],
-      "matchVersions": [
-        "8.15.x"
-      ],
+      "matchVersions": ["8.15.x"],
       "enabled": false
     },
     {
-      "matchManagers": [
-        "maven"
-      ],
+      "matchManagers": ["maven"],
       "matchPackageNames": [
         "org.apache.sshd:sshd-scp"
       ],
-      "matchVersions": [
-        "2.14.x"
-      ],
+      "matchVersions": ["2.14.x"],
       "enabled": false
     }
   ],
@@ -76,11 +65,6 @@
       "hostType": "maven",
       "matchHost": "maven.pkg.github.com",
       "token": "{{ secrets.GITHUB_SECRET }}"
-    },
-    {
-      "matchHost": "https://registry.npmjs.org",
-      "hostType": "npm",
-      "token": "{{ secrets.ORG_NPM_TOKEN }}"
     }
   ],
   "ignoreDeps": [
