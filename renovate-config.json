@@ -58,6 +58,12 @@
       ],
       "matchVersions": ["2.14.x"],
       "enabled": false
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "matchVersions": [">=5.7.0"],
+      "enabled": false
     }
   ],
   "ignoreDeps": [
