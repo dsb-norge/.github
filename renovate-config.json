@@ -26,17 +26,19 @@
       ]
     },
     {
-      "matchManagers": [
-        "npm"
-      ],
+      "matchManagers": ["npm"],
       "excludePackageNames": [
         "@dsb-norge/vue-keycloak-js"
       ]
     },
     {
-      "matchDatasources": [
-        "maven"
-      ],
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["typescript"],
+      "matchVersions": [">=5.7.0"],
+      "enabled": false
+    },
+    {
+      "matchDatasources": ["maven"],
       "registryUrls": [
         "https://maven.pkg.github.com/dsb-norge/.github",
         "https://repo.maven.apache.org/maven2/"
@@ -60,10 +62,11 @@
       "enabled": false
     },
     {
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["typescript"],
-      "matchVersions": [">=5.7.0"],
-      "enabled": false
+      "matchManagers": ["maven"],
+      "excludePackageNames": [
+        "no.dsb:elastic-exporter-api",
+        "no.dsb:brannstatistikk-api"
+      ]
     }
   ],
   "ignoreDeps": [
