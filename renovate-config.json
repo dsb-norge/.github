@@ -38,6 +38,12 @@
       "enabled": false
     },
     {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vue-tsc"],
+      "matchVersions": ["2.2.0"],
+      "enabled": false
+    },
+    {
       "matchDatasources": ["maven"],
       "registryUrls": [
         "https://maven.pkg.github.com/dsb-norge/.github",
