@@ -27,12 +27,6 @@
     },
     {
       "matchManagers": ["npm"],
-      "excludePackageNames": [
-        "@dsb-norge/vue-keycloak-js"
-      ]
-    },
-    {
-      "matchManagers": ["npm"],
       "matchPackageNames": ["typescript"],
       "matchVersions": [">=5.7.0"],
       "enabled": false
@@ -74,9 +68,6 @@
         "no.dsb:brannstatistikk-api"
       ]
     }
-  ],
-  "ignoreDeps": [
-    "@dsb-norge/vue-keycloak-js"
   ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
