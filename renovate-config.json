@@ -67,6 +67,13 @@
         "no.dsb:elastic-exporter-api",
         "no.dsb:brannstatistikk-api"
       ]
+    },
+    {
+      "matchManagers": ["maven"],
+      "matchPackagePatterns": ["^no\\.dsb.*"],
+      "major": {
+        "enabled": true
+      }
     }
   ],
   "ignoreScripts": true,
