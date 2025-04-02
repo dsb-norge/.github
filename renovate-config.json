@@ -71,6 +71,7 @@
     {
       "matchManagers": ["maven"],
       "matchPackagePatterns": ["^no\\.dsb.*"],
+      "groupName": "combined - internal dependencies",
       "major": {
         "enabled": true
       }
