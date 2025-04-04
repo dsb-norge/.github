@@ -4,38 +4,30 @@
   "platform": "github",
   "enabledManagers": ["npm", "maven"],
   "extends": [
-    ":autodetectPinVersions",
     ":prConcurrentLimit10",
     "workarounds:all",
     ":semanticPrefixFixDepsChoreOthers",
     ":ignoreModulesAndTests",
-    ":autodetectPinVersions",
     ":pinAllExceptPeerDependencies",
     ":disableMajorUpdates"
   ],
   "packageRules": [
     {
-      "matchManagers": [
-        "maven",
-        "npm"
-      ],
+      "matchManagers": ["maven", "npm"],
       "groupName": "combined - minor and patch",
-      "matchUpdateTypes": [
-        "minor",
-        "patch"
-      ]
+      "matchUpdateTypes": ["minor", "patch"]
+    },
+    {
+      "matchManagers": ["maven"],
+      "groupName": "combined - internal dependencies",
+      "matchUpdateTypes": ["major"],
+      "enabled": true,
+      "matchPackageNames": ["/^no\\.dsb.*/"]
     },
     {
       "matchManagers": ["npm"],
       "matchPackageNames": ["typescript"],
-      "matchVersions": [">=5.7.0"],
-      "enabled": false
-    },
-    {
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["vue-tsc"],
-      "matchVersions": ["2.2.0"],
-      "enabled": false
+      "allowedVersions": "<5.7.0"
     },
     {
       "matchDatasources": ["maven"],
@@ -50,38 +42,24 @@
         "co.elastic.clients:elasticsearch-java",
         "org.elasticsearch.client:elasticsearch-rest-client"
       ],
-      "matchVersions": ["8.15.x"],
-      "enabled": false
+      "allowedVersions": "<8.15.0"
+    },
+    {
+      "matchManagers": ["maven"],
+      "matchPackageNames": ["org.apache.sshd:sshd-scp"],
+      "allowedVersions": "<2.14.0"
     },
     {
       "matchManagers": ["maven"],
       "matchPackageNames": [
-        "org.apache.sshd:sshd-scp"
-      ],
-      "matchVersions": ["2.14.x"],
-      "enabled": false
-    },
-    {
-      "matchManagers": ["maven"],
-      "excludePackageNames": [
-        "no.dsb:elastic-exporter-api",
-        "no.dsb:brannstatistikk-api"
+        "!no.dsb:elastic-exporter-api",
+        "!no.dsb:brannstatistikk-api"
       ]
-    },
-    {
-      "matchManagers": ["maven"],
-      "matchPackagePatterns": ["^no\\.dsb.*"],
-      "groupName": "combined - internal dependencies",
-      "major": {
-        "enabled": true
-      }
     }
   ],
   "ignoreScripts": true,
   "prHourlyLimit": 4,
-  "reviewers": [
-    "dsb-developers"
-  ],
+  "reviewers": ["dsb-developers"],
   "schedule": [
     "after 12:30am and before 6:30am every weekday",
     "every weekend"
@@ -89,7 +67,5 @@
   "updateNotScheduled": false,
   "timezone": "Europe/Oslo",
   "automerge": true,
-  "labels": [
-    "pr-created-by-renovate"
-  ]
+  "labels": ["pr-created-by-renovate"]
 }
