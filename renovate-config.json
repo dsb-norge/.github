@@ -2,14 +2,15 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shared Renovate configuration for dsb-norge projects. Minor and patch updates are collected into the same PR, while major updates are ignored.",
   "platform": "github",
-  "enabledManagers": ["npm", "maven"],
+  "enabledManagers": [
+    "npm",
+    "maven"
+  ],
   "extends": [
-    ":autodetectPinVersions",
     ":prConcurrentLimit10",
     "workarounds:all",
     ":semanticPrefixFixDepsChoreOthers",
     ":ignoreModulesAndTests",
-    ":autodetectPinVersions",
     ":pinAllExceptPeerDependencies",
     ":disableMajorUpdates"
   ],
@@ -26,55 +27,83 @@
       ]
     },
     {
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["typescript"],
-      "matchVersions": [">=5.7.0"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "typescript"
+      ],
+      "allowedVersions": [
+        "!/>=5.7.0/"
+      ],
       "enabled": false
     },
     {
-      "matchManagers": ["npm"],
-      "matchPackageNames": ["vue-tsc"],
-      "matchVersions": ["2.2.0"],
+      "matchManagers": [
+        "npm"
+      ],
+      "matchPackageNames": [
+        "vue-tsc"
+      ],
+      "allowedVersions": [
+        "!/2.2.0/"
+      ],
       "enabled": false
     },
     {
-      "matchDatasources": ["maven"],
+      "matchDatasources": [
+        "maven"
+      ],
       "registryUrls": [
         "https://maven.pkg.github.com/dsb-norge/.github",
         "https://repo.maven.apache.org/maven2/"
       ]
     },
     {
-      "matchManagers": ["maven"],
+      "matchManagers": [
+        "maven"
+      ],
       "matchPackageNames": [
         "co.elastic.clients:elasticsearch-java",
         "org.elasticsearch.client:elasticsearch-rest-client"
       ],
-      "matchVersions": ["8.15.x"],
+      "allowedVersions": [
+        "!/8.15.x/"
+      ],
       "enabled": false
     },
     {
-      "matchManagers": ["maven"],
+      "matchManagers": [
+        "maven"
+      ],
       "matchPackageNames": [
         "org.apache.sshd:sshd-scp"
       ],
-      "matchVersions": ["2.14.x"],
+      "allowedVersions": [
+        "!/2.14.x/"
+      ],
       "enabled": false
     },
     {
-      "matchManagers": ["maven"],
-      "excludePackageNames": [
-        "no.dsb:elastic-exporter-api",
-        "no.dsb:brannstatistikk-api"
+      "matchManagers": [
+        "maven"
+      ],
+      "matchPackageNames": [
+        "!no.dsb:elastic-exporter-api",
+        "!no.dsb:brannstatistikk-api"
       ]
     },
     {
-      "matchManagers": ["maven"],
-      "matchPackagePatterns": ["^no\\.dsb.*"],
-      "groupName": "combined - internal dependencies",
-      "major": {
-        "enabled": true
-      }
+      "matchManagers": [
+        "maven"
+      ],
+      "matchUpdateTypes": [
+        "major"
+      ],
+      "enabled": true,
+      "matchPackageNames": [
+        "/^no\\.dsb.*/"
+      ]
     }
   ],
   "ignoreScripts": true,
