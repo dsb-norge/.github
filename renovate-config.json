@@ -59,7 +59,7 @@
     {
       "matchManagers": ["npm"],
       "matchPackageNames": ["sass-embedded"],
-      "allowedVersions": "!=1.89.1"
+      "allowedVersions": "<1.89.1 || >1.89.1"
     }
   ],
   "ignoreScripts": true,
