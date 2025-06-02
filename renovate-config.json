@@ -55,6 +55,11 @@
         "!no.dsb:elastic-exporter-api",
         "!no.dsb:brannstatistikk-api"
       ]
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["sass-embedded"],
+      "allowedVersions": "!=1.89.1"
     }
   ],
   "ignoreScripts": true,
