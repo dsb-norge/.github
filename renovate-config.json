@@ -57,7 +57,7 @@
     {
       "matchManagers": ["maven"],
       "matchPackageNames": ["de.codecentric:spring-boot-admin-starter-server"],
-      "allowedVersions": "!=3.5.5"
+      "allowedVersions": "!=3.5.6"
     },
     {
       "matchManagers": ["maven"],
