@@ -62,8 +62,8 @@
     {
       "matchManagers": ["maven"],
       "matchPackageNames": ["no.dsb:dsb-test-harness"],
-      "versioning": "loose",
-      "allowedVersions": "<=2026.01.23.20965"
+      "versioning": "regex:^(?<major>\\d+)\\.(?<minor>\\d+)\\.(?<patch>\\d+)\\.(?<build>\\d+)$",
+      "allowedVersions": "<= 2026.01.23.20965"
     },
     {
       "matchManagers": ["maven"],
