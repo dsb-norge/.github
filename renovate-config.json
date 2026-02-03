@@ -2,7 +2,7 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "description": "Shared Renovate configuration for dsb-norge projects. Minor and patch updates are collected into the same PR, while major updates are ignored.",
   "platform": "github",
-  "enabledManagers": ["npm", "maven"],
+  "enabledManagers": ["npm", "maven", "python"],
   "extends": [
     ":prConcurrentLimit10",
     "workarounds:all",
