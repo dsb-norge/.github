@@ -75,6 +75,11 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["sass-embedded"],
       "allowedVersions": "<1.89.1 || >1.89.1"
+    },
+    {
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["axios"],
+      "allowedVersions": "<1.14.1 || >1.14.1"
     }
   ],
   "ignoreScripts": true,
