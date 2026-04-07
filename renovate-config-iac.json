@@ -12,7 +12,7 @@
         ":semanticPrefixFixDepsChoreOthers",
         ":prConcurrentLimit10"
     ],
-    "minimumReleaseAge": "3 days",
+    "minimumReleaseAge": "7 days",
     "prCreation": "not-pending",
     "terraform": {
         "ignorePaths": [
