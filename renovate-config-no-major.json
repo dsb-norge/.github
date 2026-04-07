@@ -21,6 +21,7 @@
   "major": {
     "enabled": false
   },
+  "minimumReleaseAge": "7 days",
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
