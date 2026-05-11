@@ -82,6 +82,11 @@
       "allowedVersions": "<1.14.1 || >1.14.1"
     }
   ],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "automerge": false,
+    "labels": ["security", "pr-created-by-renovate"]
+  },
   "minimumReleaseAge": "7 days",
   "ignoreScripts": true,
   "prHourlyLimit": 4,
