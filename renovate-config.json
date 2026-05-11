@@ -86,7 +86,10 @@
     "enabled": true,
     "automerge": true,
     "minimumReleaseAge": "7 days",
-    "major": { "enabled": true },
+    "major": {
+      "enabled": true,
+      "automerge": false
+    },
     "vulnerabilityFixStrategy": "highest",
     "labels": ["security", "pr-created-by-renovate"]
   },
