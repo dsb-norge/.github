@@ -86,9 +86,22 @@
     "enabled": true,
     "automerge": true,
     "minimumReleaseAge": "7 days",
+    "major": {
+      "enabled": true,
+      "automerge": false
+    },
+    "vulnerabilityFixStrategy": "highest",
     "labels": ["security", "pr-created-by-renovate"]
   },
+  "osvVulnerabilityAlerts": true,
+  "configMigration": true,
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "abandonmentThreshold": "12 months",
   "minimumReleaseAge": "7 days",
+  "dependencyDashboard": true,
+  "dependencyDashboardOSVVulnerabilitySummary": "all",
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
