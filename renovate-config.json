@@ -89,6 +89,7 @@
     "labels": ["security", "pr-created-by-renovate"]
   },
   "minimumReleaseAge": "7 days",
+  "dependencyDashboard": true,
   "ignoreScripts": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
