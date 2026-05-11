@@ -84,7 +84,8 @@
   ],
   "vulnerabilityAlerts": {
     "enabled": true,
-    "automerge": false,
+    "automerge": true,
+    "minimumReleaseAge": "7 days",
     "labels": ["security", "pr-created-by-renovate"]
   },
   "minimumReleaseAge": "7 days",
