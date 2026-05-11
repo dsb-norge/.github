@@ -31,10 +31,8 @@
     },
     {
       "matchDatasources": ["maven"],
-      "registryUrls": [
-        "https://maven.pkg.github.com/dsb-norge/.github",
-        "https://repo.maven.apache.org/maven2/"
-      ]
+      "matchPackageNames": ["/^no\\.dsb.*/"],
+      "registryUrls": ["https://maven.pkg.github.com/dsb-norge/.github"]
     },
     {
       "matchManagers": ["maven"],
