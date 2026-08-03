@@ -59,11 +59,6 @@
     },
     {
       "matchManagers": ["maven"],
-      "matchPackageNames": ["no.dsb:dsb-test-harness"],
-      "enabled": false
-    },
-    {
-      "matchManagers": ["maven"],
       "matchPackageNames": [
         "!no.dsb:elastic-exporter-api",
         "!no.dsb:brannstatistikk-api"
