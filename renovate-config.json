@@ -78,7 +78,7 @@
   "vulnerabilityAlerts": {
     "enabled": true,
     "automerge": true,
-    "minimumReleaseAge": "7 days",
+    "minimumReleaseAge": "3 days",
     "major": {
       "enabled": true,
       "automerge": false
@@ -89,10 +89,11 @@
   "osvVulnerabilityAlerts": true,
   "configMigration": true,
   "lockFileMaintenance": {
-    "enabled": true
+    "enabled": true,
+    "schedule": ["after 12:30am and before 6:30am on monday and thursday"]
   },
   "abandonmentThreshold": "12 months",
-  "minimumReleaseAge": "7 days",
+  "minimumReleaseAge": "3 days",
   "dependencyDashboard": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
   "ignoreScripts": true,
