@@ -97,6 +97,8 @@
   "dependencyDashboard": true,
   "dependencyDashboardOSVVulnerabilitySummary": "all",
   "ignoreScripts": true,
+  "npmrc": "allow-remote=root",
+  "npmrcMerge": true,
   "prHourlyLimit": 4,
   "reviewers": ["dsb-developers"],
   "schedule": [

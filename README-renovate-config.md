@@ -19,6 +19,13 @@ To validate the config before commit, install the validator with `npm i -g renov
 
     cp renovate-config.json renovate.json && renovate-config-validator && rm renovate.json
 
+### npm tarball dependencies (`allow-remote`)
+From npm 12, which Renovate uses, `allow-remote` defaults to `none`, so npm refuses dependencies that point to a
+tarball URL (e.g. `"xlsx": "https://cdn.sheetjs.com/..."`). Lock file maintenance then fails silently, and transitive
+dependencies (and their vulnerabilities) are never updated. The presets therefore set `npmrc: "allow-remote=root"`,
+which allows URL dependencies declared in the repo's own `package.json` only, never transitive ones.
+`npmrcMerge: true` keeps each repo's own `.npmrc` (registries etc.) in addition to this setting.
+
 ### Need to configure a secret?
 __DO NOT COMMIT PLAIN TEXT SECRETS TO THIS REPO!__
 
