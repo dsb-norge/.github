@@ -79,6 +79,12 @@
       "matchManagers": ["npm"],
       "matchPackageNames": ["axios"],
       "allowedVersions": "<1.14.1 || >1.14.1"
+    },
+    {
+      "description": "vue-tsc 3.3.14 reports Pinia stores as refs in templates (Property 'value' does not exist on type 'Store')",
+      "matchManagers": ["npm"],
+      "matchPackageNames": ["vue-tsc"],
+      "allowedVersions": "<3.3.14 || >3.3.14"
     }
   ],
   "vulnerabilityAlerts": {
