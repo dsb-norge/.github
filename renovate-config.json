@@ -53,6 +53,12 @@
       "allowedVersions": "<4.0.5"
     },
     {
+      "description": "jasypt-spring-boot 4.0.0-4.0.4 fail on Spring Boot 4.2: https://github.com/ulisesbocchio/jasypt-spring-boot/issues/440",
+      "matchManagers": ["maven"],
+      "matchPackageNames": ["com.github.ulisesbocchio:jasypt-spring-boot-starter", "com.github.ulisesbocchio:jasypt-maven-plugin"],
+      "allowedVersions": "!/^4\\.0\\.[0-4]$/"
+    },
+    {
       "matchManagers": ["maven"],
       "matchPackageNames": ["de.codecentric:spring-boot-admin-starter-server"],
       "ignoreVersions": ["3.5.6"]
